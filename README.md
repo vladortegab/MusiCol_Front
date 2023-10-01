@@ -1,4 +1,4 @@
-# Challenge ONE React `Sprint 01` - Aluraflix
+# Challenge ONE React `Sprint 02` - Aluraflix
 
 AluraFlix plataforma de videos, proyecto realizado para el curso de Desarrollo Web Front End en ALura - Oracle ONE Next Education
 
