@@ -1,0 +1,17 @@
+[
+ 
+    {
+      "name": "Vladimir Ortega",
+      "email": "usuario1@example.com",
+      "password": "contraseña1",
+      "isAdmin": false
+    },
+    {
+      "name": "Daniel Quintero",
+      "email": "usuario2@example.com",
+      "password": "contraseña2",
+      "isAdmin": true
+    }
+   
+  ]
+  

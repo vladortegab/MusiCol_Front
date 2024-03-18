@@ -1,13 +1,13 @@
-import ListaCategorias from "../components/ListaCategorias"
+import ListaGeneros from "../components/ListaGeneros"
 import Hero from "../components/Hero"
-
 
 const Home = () =>{
 
     return (
         <>  
             <Hero />
-            <ListaCategorias url='/categorias'/>
+            
+            <ListaGeneros url='/generos'/>
         </>
     )
     

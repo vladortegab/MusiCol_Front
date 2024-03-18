@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import ButtonForm from '../components/ButtonForm'
-import CampoTexto from '../components/CampoTexto'
-import '../css/estilos.css'
-import { datos } from '../data/archivos_iniciales'
-import TextArea from '../components/TextArea'
-import CampoColor from '../components/CampoColor'
+import ButtonForm from '../../components/ButtonForm'
+import CampoTexto from '../../components/CampoTexto'
+import '../../css/estilos.css'
+import { datos } from '../../data/archivos_iniciales'
+import TextArea from '../../components/TextArea'
+import CampoColor from '../../components/CampoColor'
 
 const NuevaCategoria = () =>{
 
@@ -50,9 +50,9 @@ const NuevaCategoria = () =>{
 
     return (
         <>
-            <main className="nuevovideo">
+            <main className="nuevamusica">
                 <div className="container">
-                    <h2 className="nuevovideo__titulo">Nueva Categoría</h2>
+                    <h2 className="nuevamusica__titulo">Nueva Categoría</h2>
                     <form className='form' action="" onSubmit={manejarEnvio}>
                         
                         <CampoTexto 
@@ -105,7 +105,7 @@ const NuevaCategoria = () =>{
                         </thead>
                         <tbody>
                             {
-                                datos.categorias.map((categoria, i) => {
+                                datos.generos.map((categoria, i) => {
                                     return (
                                         <tr key={i}>
                                             <td>{categoria.nombre}</td>

@@ -9,13 +9,13 @@ const ListaOpciones = ({titulo, required, error, valor, actualizarValor}) => {
     return (
         <div className="form__input ">
             <div className="form__input inputbackground">
-                <label className='form__label' htmlFor="categoria">{titulo}</label>
-                <select name="categoria" id="categoria" required={required} value={valor} onChange={manejarCambio}>
-                    <option value="" disabled defaultValue='' hidden>** Escoja una categoria **</option>
+                <label className='form__label' htmlFor="genero">{titulo}</label>
+                <select name="genero" id="genero" required={required} value={valor} onChange={manejarCambio}>
+                    <option value="" disabled defaultValue='' hidden>** Escoja un Género **</option>
                     {
-                        datos.categorias.map((categoria, i) => {
+                        datos.generos.map((genero, i) => {
                             return(
-                                <option value={categoria.nombre} key={i}>{categoria.nombre}</option>
+                                <option value={genero.nombre} key={i}>{genero.nombre}</option>
                             )
                         })
                     }

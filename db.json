@@ -1,103 +1,418 @@
 {
-  "videos": [
+  "musicas":  [
     {
       "id": 1,
-      "nombre": "Cuando usar Let, var y const",
-      "urlVideo": "https://www.youtube.com/watch?v=PztCEdIJITY&t",
-      "urlImagen": "../assets/img/frontend1.png",
-      "descripcion": "A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este video te sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript.",
-      "categoria": "Front End"
+      "nombre": "d usar Let, var y const",
+      "urlMusica": "https://www.youtube.com/watch?v=PztCEdIJITY&t",
+      "urlImagen": "../assets/img/Hip_Hop/HipHop1.png",
+      "descripcion":
+        "A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este  sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript.",
+      "genero": "Hip-Hop/Rap"
     },
     {
       "id": 2,
       "nombre": "¿ Qué es JavaScript",
-      "urlVideo": "https://www.youtube.com/watch?v=GJfOSoaXk4s&t",
-      "urlImagen": "../assets/img/frontend2.png",
-      "descripcion": "JavaScript: ¿qué es y cómo se hizo este lenguaje que genera muchas discusiones y debates entre la gente del área de desarrollo? Genesys y Gabriela nos hablan exactamente de esto en este Alura Tips.",
-      "categoria": "Front End"
+      "urlMusica": "https://www.youtube.com/watch?v=GJfOSoaXk4s&t",
+      "urlImagen": "../assets/img/Hip_Hop/HipHop2.png",
+      "descripcion":
+        "JavaScript ¿qué es y cómo se hizo este lenguaje que genera muchas discusiones y debates entre la gente del área de desarrollo? Genesys y Gabriela nos hablan exactamente de esto en este Alura Tips.",
+      "genero": "Hip-Hop/Rap"
     },
     {
       "id": 3,
       "nombre": "¿ Equipo Front End",
-      "urlVideo": "https://www.youtube.com/watch?v=rpvrLaBQwgg&t",
-      "urlImagen": "../assets/img/frontend3.png",
-      "descripcion": "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?.",
-      "categoria": "Front End"
+      "urlMusica": "https://www.youtube.com/watch?v=rpvrLaBQwgg&t",
+      "urlImagen": "../assets/img/Hip_Hop/HipHop3.png",
+      "descripcion":
+        "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?.",
+      "genero": "Hip-Hop/Rap"
     },
     {
       "id": 4,
       "nombre": "¿ Equipo Front End",
-      "urlVideo": "https://www.youtube.com/watch?v=UuAX5azcvDQ&t",
-      "urlImagen": "https://fakeimg.pl/500x300/?text=AluraFlix&font=roboto",
+      "urlMusica": "https://www.youtube.com/watch?v=UuAX5azcvDQ&t",
+      "urlImagen": "../assets/img/Hip_Hop/HipHop4.png",
       "descripcion": "¿Cómo un desarrollador Front End utiliza el Figma? ",
-      "categoria": "Front End"
+      "genero": "Hip-Hop/Rap"
     },
     {
       "id": 5,
       "nombre": "Spring Framework. ¿Qué es ?",
-      "urlVideo": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
-      "urlImagen": "../assets/img/backend1.png",
-      "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.¿Quieres saber más?",
-      "categoria": "Back End"
+      "urlMusica": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "urlImagen": "../assets/img/Hip_Hop/HipHop5.png",
+      "descripcion":
+        "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunlo que nos brinda muchísima documentación y ayuda.¿Quieres saber más?",
+      "genero": "Hip-Hop/Rap"
     },
     {
       "id": 6,
       "nombre": "Qué es SQL y No SQL",
-      "urlVideo": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
-      "urlImagen": "../assets/img/backend2.png",
-      "descripcion": "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo.",
-      "categoria": "Back End"
+      "urlMusica": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "urlImagen": "../assets/img/Hip_Hop/HipHop6.png",
+      "descripcion":
+        "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo.",
+      "genero": "Hip-Hop/Rap"
     },
     {
       "id": 7,
       "nombre": "Simplificando tu código en Java: Conoce los enum",
-      "urlVideo": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
-      "urlImagen": "../assets/img/backend3.png",
-      "descripcion": "¿Escribir muchas variables del tipo constantes en Java te parece un proceso tedioso y que genera muchas líneas de código? En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum.",
-      "categoria": "Back End"
+      "urlMusica": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "urlImagen": "../assets/img/Latino/Latino1.png",
+      "descripcion":
+        "¿Escribir muchas variables del tipo constantes en Java te parece un proceso tedioso y que genera muchas líneas de código? En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum.",
+      "genero": "Latin"
+    },
+    {
+      "id": 8,
+      "nombre": "¿Qué son las Soft Skills?",
+      "urlMusica": "https://www.youtube.com/watch?v=vhwspfvI52k&t",
+      "urlImagen": "../assets/img/Latino/Latino2.png",
+      "descripcion":
+        "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en eles más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
+      "genero": "Latin"
     },
     {
       "id": 9,
-      "nombre": "¿Qué son las Soft Skills?",
-      "urlVideo": "https://www.youtube.com/watch?v=vhwspfvI52k&t",
-      "urlImagen": "../assets/img/IG1.png",
-      "descripcion": "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este video de Alura Tips, Pri Stuani nos habla de las habilidades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
-      "categoria": "Innovación y Gestión"
+      "nombre": "7 Soft Skills más deseadas por las empresas",
+      "urlMusica": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "urlImagen": "../assets/img/Latino/Latino3.png",
+      "descripcion":
+        "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este v con nosotros que vamos a explicarte la importancia de estas habis y porque son tan requers en el mercado laboral.",
+      "genero": "Latin"
     },
     {
       "id": 10,
-      "nombre": "7 Soft Skills más deseadas por las empresas",
-      "urlVideo": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
-      "urlImagen": "../assets/img/IG2.png",
-      "descripcion": "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este video con nosotros que vamos a explicarte la importancia de estas habilidades y porque son tan requeridas en el mercado laboral.",
-      "categoria": "Innovación y Gestión"
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Latino/Latino4.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conochoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Latin"
     },
     {
       "id": 11,
+      "nombre": "¿ Equipo Front End",
+      "urlMusica": "https://www.youtube.com/watch?v=rpvrLaBQwgg&t",
+      "urlImagen": "../assets/img/Latino/Latino5.png",
+      "descripcion":
+        "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?.",
+      "genero": "Latin"
+    },
+    {
+      "id": 12,
+      "nombre": "¿ Equipo Front End",
+      "urlMusica": "https://www.youtube.com/watch?v=UuAX5azcvDQ&t",
+      "urlImagen": "../assets/img/Latino/Latino7.png",
+      "descripcion": "¿Cómo un desarrollador Front End utiliza el Figma? ",
+      "genero": "Latin"
+    },
+    {
+      "id": 13,
+      "nombre": "Spring Framework. ¿Qué es ?",
+      "urlMusica": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton1.png",
+      "descripcion":
+        "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comun lo que nos brinda muchísima documentación y ayuda.¿Quieres saber más?",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 14,
+      "nombre": "Qué es SQL y No SQL",
+      "urlMusica": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton2.png",
+      "descripcion":
+        "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo.",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 15,
+      "nombre": "Simplificando tu código en Java: Conoce los enum",
+      "urlMusica": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton3.png",
+      "descripcion":
+        "¿Escribir muchas variables del tipo constantes en Java te parece un proceso tedioso y que genera muchas líneas de código? En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum.",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 16,
+      "nombre": "¿Qué son las Soft Skills?",
+      "urlMusica": "https://www.youtube.com/watch?v=vhwspfvI52k&t",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton4.png",
+      "descripcion":
+        "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este eo de Alura Tips, Pri Stuani nos habla de las habides más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 17,
+      "nombre": "7 Soft Skills más deseadas por las empresas",
+      "urlMusica": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton5.png",
+      "descripcion":
+        "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este v con nosotros que vamos a explicarte la importancia de estas habies y porque son tan reques en el mercado laboral.",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 18,
       "nombre": "¿Qué son las metodologias ágiles?",
-      "urlVideo": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
-      "urlImagen": "../assets/img/IG3.png",
-      "descripcion": "En este video nuestra invitada, Andyara, nos explicará que són las muy conocidas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
-      "categoria": "Innovación y Gestión"
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton6.png",
+      "descripcion":
+        "En este eo nuestra invitada, Andyara, nos explicará que són las muy cono hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 19,
+      "nombre": "7 Soft Skills más deseadas por las empresas",
+      "urlMusica": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "urlImagen": "../assets/img/Raeggeton/Raeggeton7.png",
+      "descripcion":
+        "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este v con nosotros que vamos a explicarte la importancia de estas habildes y porque son tan requer en el mercado laboral.",
+      "genero": "Raeggeton"
+    },
+    {
+      "id": 20,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Rock/Rock1.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Rock"
+    },
+    {
+      "id": 21,
+      "nombre": "¿ Equipo Front End",
+      "urlMusica": "https://www.youtube.com/watch?v=rpvrLaBQwgg&t",
+      "urlImagen": "../assets/img/Rock/Rock2.png",
+      "descripcion":
+        "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?.",
+      "genero": "Rock"
+    },
+    {
+      "id": 22,
+      "nombre": "¿ Equipo Front End",
+      "urlMusica": "https://www.youtube.com/watch?v=UuAX5azcvDQ&t",
+      "urlImagen": "../assets/img/Rock/Rock3.png",
+      "descripcion": "¿Cómo un desarrollador Front End utiliza el Figma? ",
+      "genero": "Rock"
+    },
+    {
+      "id": 23,
+      "nombre": "Spring Framework. ¿Qué es ?",
+      "urlMusica": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "urlImagen": "../assets/img/Rock/Rock4.png",
+      "descripcion":
+        "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comu, lo que nos brinda muchísima documentación y ayuda.¿Quieres saber más?",
+      "genero": "Rock"
+    },
+    {
+      "id": 24,
+      "nombre": "Qué es SQL y No SQL",
+      "urlMusica": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "urlImagen": "../assets/img/Rock/Rock5.png",
+      "descripcion":
+        "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo.",
+      "genero": "Rock"
+    },
+    {
+      "id": 25,
+      "nombre": "Simplificando tu código en Java: Conoce los enum",
+      "urlMusica": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "urlImagen": "../assets/img/Rock/Rock6.png",
+      "descripcion":
+        "¿Escribir muchas variables del tipo constantes en Java te parece un proceso tedioso y que genera muchas líneas de código? En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum.",
+      "genero": "Rock"
+    },
+    {
+      "id": 26,
+      "nombre": "¿Qué son las Soft Skills?",
+      "urlMusica": "https://www.youtube.com/watch?v=vhwspfvI52k&t",
+      "urlImagen": "../assets/img/Rock/Rock7.png",
+      "descripcion":
+        "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En esto de Alura Tips, Pri Stuani nos habla de las haades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
+      "genero": "Rock"
+    },
+    {
+      "id": 27,
+      "nombre": "7 Soft Skills más deseadas por las empresas",
+      "urlMusica": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "urlImagen": "../assets/img/Electronica/Electronica1.png",
+      "descripcion":
+        "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este  con nosotros que vamos a explicarte la importancia de estas habies y porque son tan requerel mercado laboral.",
+      "genero": "Electronica"
+    },
+    {
+      "id": 28,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Electronica/Electronica2.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conoc en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Electronica"
+    },
+    {
+      "id": 29,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Electronica/Electronica3.png",
+      "descripcion":
+        "En este vo nuestra invitada, Andyara, nos explicará que són las muy conocoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Electronica"
+    },
+    {
+      "id": 30,
+      "nombre": "¿ Equipo Front End",
+      "urlMusica": "https://www.youtube.com/watch?v=rpvrLaBQwgg&t",
+      "urlImagen": "../assets/img/Electronica/Electronica4.png",
+      "descripcion":
+        "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?.",
+      "genero": "Electronica"
+    },
+    {
+      "id": 31,
+      "nombre": "¿ Equipo Front End",
+      "urlMusica": "https://www.youtube.com/watch?v=UuAX5azcvDQ&t",
+      "urlImagen": "../assets/img/Electronica/Electronica5.png",
+      "descripcion": "¿Cómo un desarrollador Front End utiliza el Figma? ",
+      "genero": "Electronica"
+    },
+    {
+      "id": 32,
+      "nombre": "Spring Framework. ¿Qué es ?",
+      "urlMusica": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "urlImagen": "../assets/img/Electronica/Electronica6.png",
+      "descripcion":
+        "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comu, lo que nos brinda muchísima documentación y ayuda.¿Quieres saber más?",
+      "genero": "Electronica"
+    },
+    {
+      "id": 33,
+      "nombre": "Qué es SQL y No SQL",
+      "urlMusica": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "urlImagen": "../assets/img/Electronica/Electronica7.png",
+      "descripcion":
+        "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo.",
+      "genero": "Electronica"
+    },
+    {
+      "id": 34,
+      "nombre": "Simplificando tu código en Java: Conoce los enum",
+      "urlMusica": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "urlImagen": "../assets/img/Electronica/Electronica8.png",
+      "descripcion":
+        "¿Escribir muchas variables del tipo constantes en Java te parece un proceso tedioso y que genera muchas líneas de código? En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum.",
+      "genero": "Electronica"
+    },
+    {
+      "id": 35,
+      "nombre": "¿Qué son las Soft Skills?",
+      "urlMusica": "https://www.youtube.com/watch?v=vhwspfvI52k&t",
+      "urlImagen": "../assets/img/Caribe/Caribe1.png",
+      "descripcion":
+        "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este vo de Alura Tips, Pri Stuani nos habla de las habilades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 36,
+      "nombre": "7 Soft Skills más deseadas por las empresas",
+      "urlMusica": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "urlImagen": "../assets/img/Caribe/Caribe2.png",
+      "descripcion":
+        "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este veo con nosotros que vamos a explicarte la importancia de estas habilades y porque son tan requeras en el mercado laboral.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 37,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Caribe/Caribe3.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conocas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 38,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Caribe/Caribe4.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conocidas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 39,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Caribe/Caribe5.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conocas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 40,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Caribe/Caribe6.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conocas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 41,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Caribe/Caribe7.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conocas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Caribe"
+    },
+    {
+      "id": 42,
+      "nombre": "¿Qué son las metodologias ágiles?",
+      "urlMusica": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "urlImagen": "../assets/img/Caribe/Caribe8.png",
+      "descripcion":
+        "En este veo nuestra invitada, Andyara, nos explicará que són las muy conocas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+      "genero": "Caribe"
     }
   ],
-  "categorias": [
+  "generos": [
     {
       "id": 1,
-      "nombre": "Front End",
-      "descripcion": "Formación Front End de Alura Latam",
+      "nombre": "Hip-Hop/Rap",
+      "descripcion": "En este veo nuestra Género de música popular desarrollado en los Estados Unidos",
       "color": "#6BD1FF"
     },
     {
       "id": 2,
-      "nombre": "Back End",
-      "descripcion": "Formación Back End de Alura Latam",
+      "nombre": "Latin",
+      "descripcion": "Proveniente de LatinoAmérica",
       "color": "#00C86F"
     },
     {
       "id": 3,
-      "nombre": "Innovación y Gestión",
-      "descripcion": "Formación Innovación y Gestión de Alura Latam",
+      "nombre": "Caribe",
+      "descripcion": "Género de música Caribeña, sobre el Mar Caribe ",
+      "color": "#FE8C2A"
+    },
+    {
+      "id": 4,
+      "nombre": "Rock",
+      "descripcion":
+        "Es un amplio género de música popular originado a principios de la década de 1950 en Estados Unidos",
+        "color": "#6BD1FF"
+    },
+    {
+      "id": 5,
+      "nombre": "Raeggeton",
+      "descripcion":
+        "Es un género musical​ que derivó del reggae en español que es a su vez un subgénero del dancehall e incluye elementos del hip hop.",
+        "color": "#00C86F"
+    },
+    {
+      "id": 6,
+      "nombre": "Electronica",
+      "descripcion":
+        "Género musical que se crea y produce utilizando instrumentos electrónicos y electromecánicos,",
       "color": "#FE8C2A"
     }
   ]

@@ -1,12 +1,12 @@
 import '../css/estilos.css'
-import LogoAluraFlix from '../img/LogoFooter.png'
+import LogoMusicaCol from '../../src/img/LogoFooter.png'
 
 
 const Footer = () =>{
     return (
         <footer>
             <div className=''>
-                <img src={LogoAluraFlix} alt="Logo AluraFlix" />
+                <img src={LogoMusicaCol} alt="Logo MusicaCol" />
             </div>
             
         </footer>

@@ -1,16 +1,26 @@
 {
-  "name": "react_aluraflix",
+  "name": "musicacol",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.10",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "bootstrap": "^4.6.0",
+    "firebase": "^10.8.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
+    "react-icons": "^5.0.1",
+    "react-oauth2-code-pkce": "^1.17.2",
+    "react-oauth2-pkce": "^2.0.7",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^4.3.1",
+    "react-s-alert": "^1.4.1",
     "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
   },
@@ -37,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }

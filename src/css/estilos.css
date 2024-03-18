@@ -24,6 +24,22 @@ img {
     height: 94px;
 }
 
+.enlace{
+    display: inline-block;
+    color: #F5F5F5;
+    background-color: #000000;
+    border: 1px solid #F5F5F5;
+    border-radius: 4px;
+    font-size: 21px;
+    font-weight: 600;
+    width: 180px;
+    height: 54px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header__btn{
     display: inline-block;
     color: #F5F5F5;
@@ -43,7 +59,7 @@ img {
 /* Hero */
 .hero{
     background-color: #000000;
-    background-image: url('../img/HeroBG.png');
+    background-image: url('../../../MusicaCol/public/assets/img/HeroBG.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -103,17 +119,17 @@ Link .hero__player{
     }
 }
 
-/* Main - Categorias Lista videos */
+/* Main - Generos Lista musicas */
 .sr-only{
     display: none;
 }
 
-.categorias{
+.generos{
     background-color: #000000;
     padding: 20px 0px;
 }
 
-.categorias__titulo{
+.generos__titulo{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -121,7 +137,7 @@ Link .hero__player{
     margin-top: 40px;
 }
 
-.categorias__nombre{
+.generos__nombre{
     color: #F5F5F5;
     font-size: 35px;
     font-weight: 400;
@@ -129,31 +145,31 @@ Link .hero__player{
     padding: 10px;
 }
 
-.categorias__descripcion{
+.generos__descripcion{
     color: #F5F5F5;
     font-size: 18px;
     font-weight: 300;
     line-height: 21px;
 }
 
-.categorias__listavideos{
+.generos__listamusicas{
     display:flex;
     gap: 20px;
     padding: 10px 0px;
     overflow-x: auto;
 }
 
-.categorias__listavideos::-webkit-scrollbar{
+.generos__listamusicas::-webkit-scrollbar{
     width: 5px;
 }
 
-.categorias__listavideos::-webkit-scrollbar-thumb{
+.generos__listamusicas::-webkit-scrollbar-thumb{
     background: #2A7Ae4;
 }
 
 
-/* Videocard */
-.videocard{
+/* Musicacard */
+.musicacard{
     min-width: 436px;
     min-height: 264px;
     max-width: 432px;
@@ -162,7 +178,7 @@ Link .hero__player{
     overflow: hidden;
 }
 
-.videocard img {
+.musicacard img {
     object-fit: cover;
     max-width: 100%;
     max-height: 100%;
@@ -193,6 +209,7 @@ footer{
 
 .error__mensaje{
     border: 4px solid #2A7Ae4;
+    background-color: white;
     padding: 30px;
     text-align: center;
 }
@@ -208,17 +225,17 @@ footer{
 }
 
 
-/* NUevo Video y Nueva Categoria*/
+/* Nueva Música y Nueva Categoria*/
 body{
     background-color: #000000;
 }
 
-.nuevovideo{
+.nuevamusica{
     background-color: #000000;
     padding-top: 40px;
 }
 
-.nuevovideo__titulo{
+.nuevomusica__titulo{
     color: #F5F5F5;
     font-size: 60px;
     font-weight: 400;
@@ -281,7 +298,7 @@ body{
 }
 
 
-/* Nuevo Video Botones */
+/* Nueva Música Botones */
 .barra__botones{
     display: flex;
     justify-content: space-between;

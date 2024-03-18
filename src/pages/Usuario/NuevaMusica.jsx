@@ -1,16 +1,16 @@
 import { useState } from "react"
-import ButtonLink from "../components/ButtonLink"
-import ButtonForm from "../components/ButtonForm"
-import CampoTexto from "../components/CampoTexto"
-import ListaOpciones from "../components/ListaOpciones"
-import TextArea from "../components/TextArea"
+import ButtonLink from "../../components/ButtonLink"
+import ButtonForm from "../../components/ButtonForm"
+import CampoTexto from "../../components/CampoTexto"
+import ListaOpciones from "../../components/ListaOpciones"
+import TextArea from "../../components/TextArea"
 
-const NuevoVideo = () =>{
+const NuevaMusica = () =>{
 
     const[titulo,setTitulo] = useState('')
-    const[linkVideo,setVideo] = useState('')
+    const[linkMusica,setMusica] = useState('')
     const[linkImagen,setImagen] = useState('')
-    const[categoria,setCategoria] = useState('')
+    const[genero,setGenero] = useState('')
     const[descripcion,setDescripcion] = useState('')
     const[codigoSeguridad,setCodigoSeguridad] = useState('')
     
@@ -20,16 +20,16 @@ const NuevoVideo = () =>{
         console.log('Manejar el envio')
         let datosAEnviar = {
             titulo,
-            linkVideo,
+            linkMusica,
             linkImagen,
-            categoria,
+            genero,
             descripcion,
             codigoSeguridad
         }
         console.log(datosAEnviar)
     }
 
-    const EstilosBtnNuevaCategoria = {
+    const EstilosBtn = {
         color: '#ffffff',
         background: '#2A7AE4',
         fontSize: '21px',
@@ -69,9 +69,9 @@ const NuevoVideo = () =>{
 
     return (
         <>
-            <main className="nuevovideo">
+            <main className="nuevamusica">
                 <div className="container">
-                    <h2 className="nuevovideo__titulo">Nuevo Video</h2>
+                    <h2 className="nuevamusica__titulo">Nueva Música</h2>
                     
                     <form className='form' action="" onSubmit={manejarEnvio}>
                         
@@ -84,15 +84,15 @@ const NuevoVideo = () =>{
                         />
                         
                         <CampoTexto 
-                            titulo='Link del video' 
+                            titulo='Link del archivo de música' 
                             mensaje="" 
                             required={true} 
-                            valor={linkVideo} 
-                            actualizarValor={setVideo} 
+                            valor={linkMusica} 
+                            actualizarValor={setMusica} 
                         />
 
                         <CampoTexto 
-                            titulo='Link de la imagen del video' 
+                            titulo='Link de la imagen del archivo de música' 
                             mensaje="" 
                             required={true} 
                             valor={linkImagen} 
@@ -100,15 +100,15 @@ const NuevoVideo = () =>{
                         />
 
                         <ListaOpciones 
-                            titulo='Categoría' 
+                            titulo='Género' 
                             mensaje="" 
                             required={true} 
-                            valor={categoria} 
-                            actualizarValor={setCategoria} 
+                            valor={genero} 
+                            actualizarValor={setGenero} 
                         />
 
                         <TextArea 
-                            titulo='Descripción de la categoría' 
+                            titulo='Descripción del archivo ' 
                             mensaje='' 
                             required={true} 
                             valor={descripcion} 
@@ -127,7 +127,7 @@ const NuevoVideo = () =>{
                                 <ButtonForm titulo='Guardar' styles={EstilosBtnGuardar} />
                                 <ButtonForm titulo='Limpiar' styles={EstilosBtnLimpiar} />
                             </div>
-                            <ButtonLink to='/nuevacategoria' titulo='Nueva Categoría' styles={EstilosBtnNuevaCategoria}/>
+                            <ButtonLink to='/nuevamusica' titulo='Nueva Música' styles={EstilosBtn}/>
                         </div>
 
                     </form>
@@ -142,4 +142,4 @@ const NuevoVideo = () =>{
     
 }
 
-export default NuevoVideo
+export default NuevaMusica
