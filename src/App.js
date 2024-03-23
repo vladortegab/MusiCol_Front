@@ -87,49 +87,51 @@ class App extends Component {
     }
 
     return (
-      <LoginContextProvider>
-      <Router>
-        <div className="App">
-          <GlobalStyle />
-          <Header
-            authenticated={this.state.authenticated}
-            onLogout={this.handleLogout}
+      <>
+        <Router>
+          <div className="App">
+            <GlobalStyle />
+            <Header
+              authenticated={this.state.authenticated}
+              onLogout={this.handleLogout}
             />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/nuevamusica" component={NuevaMusica} />
-            <Route path="/nuevacategoria" component={NuevaCategoria} />
-            <Route path="/editar_musica" component={EditarMusica} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/nuevamusica" component={NuevaMusica} />
+              <Route path="/nuevacategoria" component={NuevaCategoria} />
+              <Route path="/editar_musica" component={EditarMusica} />
 
-           {/*  <PrivateRoute
+              {/*  <PrivateRoute
               path="/mi_musica"
               authenticated={this.state.authenticated}
               component={EditarMusica}
             /> */}
-            {/* <PrivateRoute path="/mi_musica" authenticated={this.state.authenticated} component={MiMusica} /> */}
-            <Route
-              path="/login"
-              render={(props) => (
-                <Login {...props} onLogin={this.handleLogin} />
+              {/* <PrivateRoute path="/mi_musica" authenticated={this.state.authenticated} component={MiMusica} /> */}
+              <Route
+                path="/login"
+                render={(props) => (
+                  <LoginContextProvider>
+                    <Login {...props} onLogin={this.handleLogin} />
+                  </LoginContextProvider>
                 )}
-                />
-
-            <Route path="/signup" component={Signup} />
-            <PrivateRoute
-              path="/profile"
-              authenticated={this.state.authenticated}
-              currentUser={this.state.currentUser}
-              component={Profile}
               />
-            <Route path="/mi_musica" component={MiMusica} />
-            <Route path="/login" component={OAuth2RedirectHandler} />
-            <Route component={Page404}></Route>
-            <Redirect to="/404" />
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-              </LoginContextProvider>
+
+              <Route path="/signup" component={Signup} />
+              <PrivateRoute
+                path="/profile"
+                authenticated={this.state.authenticated}
+                currentUser={this.state.currentUser}
+                component={Profile}
+              />
+              <Route path="/mi_musica" component={MiMusica} />
+              <Route path="/login" component={OAuth2RedirectHandler} />
+              <Route component={Page404}></Route>
+              <Redirect to="/404" />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
+      </>
     );
   }
 }

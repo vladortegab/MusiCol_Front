@@ -11,4 +11,4 @@ const MiMusica = () =>{
     
 }
 
-export default MiMusica
+export default MiMusica 

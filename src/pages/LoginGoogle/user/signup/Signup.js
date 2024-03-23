@@ -58,7 +58,7 @@ const Signup = ({ authenticated, location }) => {
         <Box>
           <LogoSpace>
             <Img src={"../../../assets/img/favicon.jpg"} alt="Logo" />
-            <Typography variant="h3">Signup</Typography>
+            <Typography variant="h3">Registro</Typography>
           </LogoSpace>
           <FormSpace>
             {!isSignedUp && <SignupForm onSuccess={handleSignupSuccess} />}
@@ -71,10 +71,10 @@ const Signup = ({ authenticated, location }) => {
         <Box>
           <div className="signup-container">
             <div className="or-separator">
-              <span className="or-text">OR</span>
+              <span className="or-text">O</span>
             </div>
             <span className="login-link">
-              Already have an account? <Link to="/login">Login!</Link>
+            ¿Ya tiene una cuenta? <Link to="/login">Ingresar!</Link>
             </span>
             {!isSignedUp && <SocialSignup />} {/* Mostrar SocialSignup solo si el usuario no está registrado */}
           </div>
@@ -89,16 +89,16 @@ const SocialSignup = () => {
   return (
     <div className="social-signup">
       <a className="btn btn-block social-btn google" href={GOOGLE_AUTH_URL}>
-        <img src={googleLogo} alt="Google" /> Sign up with Google
+        <img src={googleLogo} alt="Google" /> Regístrese con Google
       </a>
       <a
         className="btn btn-block social-btn facebook"
         href={FACEBOOK_AUTH_URL}
       >
-        <img src={fbLogo} alt="Facebook" /> Sign up with Facebook
+        <img src={fbLogo} alt="Facebook" />Regístrese con Facebook
       </a>
       <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL}>
-        <img src={githubLogo} alt="Github" /> Sign up with Github
+        <img src={githubLogo} alt="Github" /> Regístrese con  Github
       </a>
     </div>
   );
@@ -144,7 +144,7 @@ const SignupForm = ({ onSuccess }) => {
           type="text"
           name="name"
           className="form-control"
-          placeholder="Name"
+          placeholder="Nombre"
           value={formData.name}
           onChange={handleInputChange}
           required
@@ -155,7 +155,7 @@ const SignupForm = ({ onSuccess }) => {
           type="email"
           name="email"
           className="form-control"
-          placeholder="Email"
+          placeholder="Correo"
           value={formData.email}
           onChange={handleInputChange}
           required
@@ -166,7 +166,7 @@ const SignupForm = ({ onSuccess }) => {
           type="password"
           name="password"
           className="form-control"
-          placeholder="Password"
+          placeholder="Contraseña"
           value={formData.password}
           onChange={handleInputChange}
           required
@@ -174,7 +174,7 @@ const SignupForm = ({ onSuccess }) => {
       </div>
       <div className="form-item">
         <button type="submit" className="btn btn-block btn-primary">
-          Sign Up
+          Registrese
         </button>
       </div>
     </form>

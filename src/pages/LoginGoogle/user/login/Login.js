@@ -1,4 +1,4 @@
-import React, { Component, useContext } from "react";
+import React, { Component, useContext, useEffect, useState } from "react";
 import { MainSpace, ImageSpace } from "../../../../styles";
 import { Box, Typography } from "@mui/material";
 import "./Login.css";
@@ -12,90 +12,111 @@ import githubLogo from "../../img/github-logo.png";
 import Alert from "react-s-alert";
 import completeImage from "../../../../../src/img/LogoFooter.png";
 import { login } from "../../util/APIUtils"; // Importa la función login desde un archivo API
+import { LoginForm } from "../../../../components/LoginForm";
+import { LoginContext } from "../../../../contexts/LoginContext";
 
 import {
   GOOGLE_AUTH_URL,
   FACEBOOK_AUTH_URL,
   GITHUB_AUTH_URL,
   ACCESS_TOKEN,
-  API_BASE_URL // Agrega API_BASE_URL si no está definido en tu archivo de constantes
+  API_BASE_URL, // Agrega API_BASE_URL si no está definido en tu archivo de constantes
 } from "../../constants";
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loginSuccess: false,
-      users: usersData,
-    };
-  }
+const Login = (props) => {
+  /*  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginSuccess, setLoginSucces] = useState(false); */
 
-  render() {
-    const { loginSuccess } = this.state;
-    const {login, handleSubmit} = useContext(LoginContext)
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    loginSuccess,
+    setLoginSucces,
+    handleSubmit
+  } = useContext(LoginContext);
 
-    return (
-      <MainSpace>
-        <ImageSpace />
-        <Box
-          sx={{
-            padding: "5vw",
-            width: "55vw",
-            height: "100vh",
-            display: "flexbox",
-            flexDirection: "column",
-            backgroundColor: "white",
-          }}
-        >
-          {/* Mostrar el mensaje de registro exitoso si loginSuccess es verdadero */}
-          {loginSuccess && (
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-              }}
-            >
-              <Typography variant="h4">¡Gracias por tu registro!</Typography>
-              <Img src={completeImage} />
-            </Box>
-          )}
+  useEffect(() => {
+    console.log(password, email);
+  }, [password, email]);
 
-          {/* Sección de registro */}
-          <Box>
-            <LogoSpace>
-              <Img src={"../../../assets/img/favicon.jpg"} alt="Logo" />
-              <Typography variant="h3">Registro</Typography>
-            </LogoSpace>
-            <FormSpace>
-              <LoginForm
-                /* users={this.state.users} */
-                onLogin={this.props.onLogin} // Asegúrate de pasar onLogin aquí
+  const loginProps = {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    loginSuccess,
+    setLoginSucces,
+  };
+
+  
+
+ 
+
+  /* const { loginSuccess } = this.state; */
+
+  return (
+    <MainSpace>
+      <ImageSpace />
+      <Box
+        sx={{
+          padding: "5vw",
+          width: "55vw",
+          height: "100vh",
+          display: "flexbox",
+          flexDirection: "column",
+          backgroundColor: "white",
+        }}
+      >
+        {/* Mostrar el mensaje de registro exitoso si loginSuccess es verdadero */}
+        {loginSuccess && (
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
+            <Typography variant="h4">¡Gracias por tu registro!</Typography>
+            <Img src={completeImage} />
+          </Box>
+        )}
+
+        {/* Sección de registro */}
+        <Box>
+          <LogoSpace>
+            <Img src={"../../../assets/img/favicon.jpg"} alt="Logo" />
+            <Typography variant="h3">Registro</Typography>
+          </LogoSpace>
+          <FormSpace>
+            <LoginForm
               handleSubmit={handleSubmit}
-                {...this.props}
-              />
-            </FormSpace>
-          </Box>
-          {/* Fin de sección de registro */}
-          {/* Sección de login */}
-          <Box>
-            <div className="separador-login">
-              <div className="or-separator">
-                <span className="or-text">OR</span>
-              </div>
-              <span className="signup-link">
-                Nuevo Usuario? <Link to="/signup">Sign up!</Link>
-              </span>
-              <SocialLogin />
-            </div>
-          </Box>
-          {/* Fin de sección de login */}
+              setEmail={setEmail}
+              setPassword={setPassword}
+            />
+          </FormSpace>
         </Box>
-      </MainSpace>
-    );
-  }
-}
+        {/* Fin de sección de registro */}
+        {/* Sección de login */}
+        <Box>
+          <div className="separador-login">
+            <div className="or-separator">
+              <span className="or-text">OR</span>
+            </div>
+            <span className="signup-link">
+              Nuevo Usuario? <Link to="/signup">Sign up!</Link>
+            </span>
+            <SocialLogin />
+          </div>
+        </Box>
+        {/* Fin de sección de login */}
+      </Box>
+    </MainSpace>
+  );
+};
 
 class SocialLogin extends Component {
   render() {
@@ -116,108 +137,6 @@ class SocialLogin extends Component {
         <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL}>
           <img src={githubLogo} alt="Github" /> Log in with Github
         </a>
-      </div>
-    );
-  }
-}
-
-class LoginForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: "",
-    };
-    this.handleSubmit=props.handleSubmit
-  }
-
-  handleInputChange = (event) => {
-    const target = event.target;
-    const inputName = target.name;
-    const inputValue = target.value;
-
-    this.setState({
-      [inputName]: inputValue,
-    });
-  };
-
-  /* handleSubmit = async (event) => {
-    event.preventDefault();
-    const { email, password } = this.state;
-
-    try {
-      const response = await login({ email, password });
-      if (response.ok) {
-        const data = await response.json()
-        this.handleSuccessfulLogin(data?.data?.token);
-      } else {
-        throw new Error('Usuario o contraseña incorrectos');
-      }
-    } catch (error) {
-      Alert.error(error.message);
-    }
-  }; */
- /*  {
-    "email": "admin@udea.edu.co",
-    "password": "password"
-    
-} */
-
-
-handleSuccessfulLogin = (accessToken) => {
-    // Almacenar el token de acceso en localStorage
-    localStorage.setItem(ACCESS_TOKEN, accessToken);
-
-    // Mostrar alerta de inicio de sesión exitoso
-    Alert.success("Inicio de sesión exitoso");
-
-    // Redirigir al usuario a la página correspondiente según su rol
-    setTimeout(() => {
-      const { history, users } = this.props;
-      const user = users.find((user) => user.email === this.state.email)
-      
-      /* if (user && user.isAdmin) {
-        history.push("/editar_musica");
-      } else {
-        history.push("/mi_musica");
-        console.log('Rute /mi-música', user )
-      } */
-    }, 2000);
-  };
-
-  render() {
-    
-    return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-item">
-            <input
-              type="input"
-              name="email"
-              className="form-control"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={this.handleInputChange}
-              required
-            />
-          </div>
-          <div className="form-item">
-            <input
-              type="password"
-              name="password"
-              className="form-control"
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.handleInputChange}
-              required
-            />
-          </div>
-          <div className="form-item">
-            <button type="submit" className="btn btn-block btn-primary">
-              Login
-            </button>
-          </div>
-        </form>
       </div>
     );
   }
