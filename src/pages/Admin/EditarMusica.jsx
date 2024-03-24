@@ -1,14 +1,27 @@
-import ListaGeneros from "../../components/ListaGeneros"
+import ListaGeneros from "../../components/ListaGeneros";
+import { useContext, useEffect } from "react";
+import { LoginContext } from "../../contexts/LoginContext";
+import { Redirect } from "react-router-dom";
 
+const MiMusica = () => {
+  const { isAuthenticate } = useContext(LoginContext);
+  const sessionStorage = window.sessionStorage;
+  console.log(
+    "🚀 ~ MiMusica ~ sessionStorage:",
+    sessionStorage.getItem("oauth")
+  );
 
-const MiMusica = () =>{
+  /* useEffect(() => {
+    console.log("🚀 ~ MiMusica ~ isAuthenticate:", isAuthenticate);
+  }, [isAuthenticate]); */
 
-    return (
-        <>  
-            <ListaGeneros url='./generos'/>
-        </>
-    )
-    
-}
+  /* <EditMyMusic/> */
 
-export default MiMusica 
+  return sessionStorage.getItem("oauth") ? (
+    <ListaGeneros url="./generos" />
+  ) : (
+    <Redirect to="/login" />
+  );
+};
+
+export default MiMusica;

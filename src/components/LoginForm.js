@@ -7,6 +7,7 @@ export const LoginForm = (props) => {
     email,
     setPassword,
     setEmail,
+    password
   } = props;
 
   return (
@@ -18,7 +19,7 @@ export const LoginForm = (props) => {
             name="email"
             className="form-control"
             placeholder="Correo"
-            /* value={email} */
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -29,7 +30,7 @@ export const LoginForm = (props) => {
             name="password"
             className="form-control"
             placeholder="Contraseña"
-            /* value={password} */
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />

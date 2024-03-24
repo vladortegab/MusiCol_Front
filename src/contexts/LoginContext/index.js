@@ -3,45 +3,67 @@ import { login } from "../../pages/LoginGoogle/util/APIUtils";
 import Alert from "react-s-alert";
 import { ACCESS_TOKEN, ROL_USER } from "../../pages/LoginGoogle/constants";
 //import { withRouter  } from "react-router-dom";
+import { useJwt, decodeToken } from "react-jwt";
 
 export const LoginContext = createContext();
 const LoginContextProvider = ({ children }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@udea.edu.co");
+  const [password, setPassword] = useState("password");
   const [loginSuccess, setLoginSucces] = useState(false);
+  const [token, setToken] = useState("");
+  const { decodedToken } = useJwt(token);
+  const [isAuthenticate, setIsAuthenticate] = useState(false)
   // const router = withRouter ();
-  let localStorage = window.localStorage;
+  const sessionStorage = window.sessionStorage;
+
+  /*   useEffect(()=>{
+    console.log("🚀 ~ LoginContextProvider ~ token:", token)
+  },[token]) */
 
   useEffect(() => {
     console.log(email, password, loginSuccess);
   }, [email, password, loginSuccess]);
 
-  const handleSuccessfullLogin = (accessToken, isAdmin) => {
-    console.log(accessToken);
-    // Almacenar el token de acceso en localStorage
-    localStorage.setItem(ACCESS_TOKEN, accessToken);
-    localStorage.setItem(ROL_USER, isAdmin); 
+  const convertedToken = (token) => {
+    let myDecodedToken = decodeToken(token);
+    console.log("🚀 ~ convertedToken ~ myDecodedToken:", myDecodedToken)
 
+    return myDecodedToken.roles[0].authority;
+  };
+
+  const handleSuccessfullLogin = (accessToken, role) => {
+    // Almacenar el token de acceso en sessionStorage
+    setIsAuthenticate(true)
+    sessionStorage.setItem(ACCESS_TOKEN, accessToken);
+    sessionStorage.setItem(ROL_USER, role);
+    sessionStorage.setItem('oauth', true)
+    console.log(
+      "🚀 ~ handleSuccessfullLogin ~ sessionStorage:",
+      sessionStorage.getItem(ROL_USER)
+    );
     // Mostrar alerta de inicio de sesión exitoso
-    Alert.success("Inicio de sesión exitoso");
+    /* Alert.success("Inicio de sesión exitoso"); */
 
     // Redirigir al usuario a la página correspondiente según su rol
     setTimeout(() => {
       if (accessToken !== "") {
         // Verificar si el usuario es administrador
-        if (email === 'admin@udea.edu.co') {
+        if (role === "ROLE_ADMIN") {
+          console.log("🚀 ~ setTimeout ~ role:", role)
           // Redirigir al usuario a /editar_musica si es administrador
-          window.location.href = "/editar_musica";
+          
+          window.location.href = "/editar_musica"; 
         } else {
           // Redirigir al usuario a /mi_musica si no es administrador
-          window.location.href = "/mi_musica";
+          /* window.location.href = "/mi_musica"; */
+          /* console.log("🚀 ~ setTimeout ~ mi_musica:", 'NO SOY ROLE') */
         }
       } else {
         Alert.success("Something was wrong");
       }
     }, 100);
   };
-  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -52,13 +74,17 @@ const LoginContextProvider = ({ children }) => {
       });
       if (response.ok) {
         const data = await response.json();
-        handleSuccessfullLogin(data.data.token, data.data.rol);
-        // handleSuccessfullLogin(data.data.token);
+        /* handleSuccessfullLogin(data.data.token, data.data.rol); */
+        setToken(data.data.token);
+        let rol = convertedToken(data.data.token);
+        
+        handleSuccessfullLogin(data.data.token, rol);
       } else {
         throw new Error("Usuario o contraseña incorrectos");
       }
     } catch (error) {
       Alert.error(error.message);
+      setIsAuthenticate(false)
     }
   };
 
@@ -74,6 +100,8 @@ const LoginContextProvider = ({ children }) => {
         setLoginSucces,
         handleSubmit,
         handleSuccessfullLogin,
+        setIsAuthenticate, 
+        isAuthenticate
       }}
     >
       {children}

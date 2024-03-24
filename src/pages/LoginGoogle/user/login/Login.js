@@ -51,10 +51,6 @@ const Login = (props) => {
     setLoginSucces,
   };
 
-  
-
- 
-
   /* const { loginSuccess } = this.state; */
 
   return (
@@ -96,6 +92,8 @@ const Login = (props) => {
               handleSubmit={handleSubmit}
               setEmail={setEmail}
               setPassword={setPassword}
+              email={email}
+              password={password}
             />
           </FormSpace>
         </Box>

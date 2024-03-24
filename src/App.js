@@ -99,7 +99,15 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/nuevamusica" component={NuevaMusica} />
               <Route path="/nuevacategoria" component={NuevaCategoria} />
-              <Route path="/editar_musica" component={EditarMusica} />
+              <Route
+               path="/editar_musica" 
+              /* component={EditarMusica} */
+              render={(props) => (
+                <LoginContextProvider>
+                  <EditarMusica {...props}  />
+                </LoginContextProvider>
+              )}
+               />
 
               {/*  <PrivateRoute
               path="/mi_musica"
