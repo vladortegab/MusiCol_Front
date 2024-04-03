@@ -1,44 +1,29 @@
-import "../css/estilos.css";
 import { Link } from "react-router-dom";
-import { datos } from "../data/archivos_iniciales";
 
-const MusicaCards = ({ url, color, nombreMusica, isAuthenticated, isEditing  }) => {
-  // Función para manejar la eliminación de una música
+const MusicaCard = ({  musica, color, url }) => {
+  const { id, urlMusica, urlImagen } = musica;
+
+   
+
   let colorCard = {
     border: `2px solid ${color}`,
     backgroundColor: `${color}`,
   };
+
+  // Función para manejar la eliminación de una música
   const handleDelete = (id) => {
-    // Aquí puedes implementar la lógica para eliminar la música con el ID proporcionado
+    // Lógica para eliminar música
   };
 
   return (
-    <>
-      {datos.musicas.map((musica) => {
-        const { id, urlMusica, urlImagen, genero } = musica;
-        if (genero === nombreMusica) {
-          return (
-            <div className="musicacard" style={colorCard} key={id}>
-              <Link
-                to={`${url}/${urlMusica}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={id}
-              >
-                <img src={`${urlImagen}`} alt="Imagen musica card" key={id} />
-              </Link>{" "}
-              {isAuthenticated && isEditing && (
-                <div className="actions">
-                  <button onClick={() => handleDelete(id)}>Eliminar</button>
-                  {/* Agrega aquí la lógica de edición si es necesario */}
-                </div>
-              )}
-            </div>
-          );
-        }
-      })}
-    </>
-  );
-};
+  
+    <div className="musicacard" style={colorCard} key={id}>
+      <Link to={`${url}/${urlMusica}`} target="_blank" rel="noopener noreferrer" key={id}>
+        <img src={urlImagen} alt={`Imagen de música ${id}`} />
+      </Link>{" "}
+      {/* Agrega la lógica de edición si es necesario */}
+    </div>
+)};
 
-export default MusicaCards;
+
+export default MusicaCard;

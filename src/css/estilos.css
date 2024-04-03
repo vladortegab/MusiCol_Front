@@ -332,6 +332,45 @@ body{
     gap: 30px;
     margin-top: 40px;
 }
+.botonNuevaMusica,
+.botonSaveAddMusica,
+.botonLimpiarAddMusica,
+.botonSaveGenero,
+.botonLimpiarGenero,
+.botonEditarGenero,
+.botonVerMusica,
+.botonVerFullGenero,
+.botonEditDeleteMusica {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  background-color: #2a7ae4;
+  color: #fff;
+}
+
+.botonNuevaMusica:hover,
+.botonSaveAddMusica:hover,
+.botonLimpiarAddMusica:hover,
+.botonSaveGenero:hover,
+.botonLimpiarGenero:hover,
+.botonEditarGenero:hover,
+.botonVerVideo:hover,
+.botonVerFullGenero:hover,
+.botonEditDeleteMusica:hover {
+  background-color: red;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.iconoBoton {
+  color: black;
+  font-size: 1.1rem;
+  padding-right: 0.5rem;
+  color: white;
+}
 
 
 /* Tabla */

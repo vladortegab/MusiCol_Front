@@ -1,6 +1,6 @@
 import { datos } from '../data/archivos_iniciales'
 
-const ListaOpciones = ({titulo, required, error, valor, actualizarValor}) => {
+const ListaOpciones = ({titulo, required, error, valor, actualizarValor, nuevoCampo}) => {
     
     const manejarCambio = (e) => {
         actualizarValor(e.target.value)
@@ -12,6 +12,7 @@ const ListaOpciones = ({titulo, required, error, valor, actualizarValor}) => {
                 <label className='form__label' htmlFor="genero">{titulo}</label>
                 <select name="genero" id="genero" required={required} value={valor} onChange={manejarCambio}>
                     <option value="" disabled defaultValue='' hidden>** Escoja un Género **</option>
+                    {nuevoCampo ? <option>{nuevoCampo}</option> : false}
                     {
                         datos.generos.map((genero, i) => {
                             return(

@@ -50,9 +50,9 @@ const LoginContextProvider = ({ children }) => {
         // Verificar si el usuario es administrador
         if (role === "ROLE_ADMIN") {
           console.log("🚀 ~ setTimeout ~ role:", role)
-          // Redirigir al usuario a /editar_musica si es administrador
+          // Redirigir al usuario a /edit-delete-videos si es administrador
           
-          window.location.href = "/editar_musica"; 
+          window.location.href = "/edit-delete-musica"; 
         } else {
           // Redirigir al usuario a /mi_musica si no es administrador
           /* window.location.href = "/mi_musica"; */

@@ -22,7 +22,10 @@ const Header = ({ location }) => {
   const isHomePage = location.pathname === "/";
   const isMiMusicaPage = location.pathname === "/mi_musica";
   const isNuevaMusicaPage = location.pathname === "/nuevamusica";
-  const isEditarMusicaPage = location.pathname === "/editar_musica";
+  const isEditarMusicaPage = location.pathname === "/edit-delete-musica";
+  const isEditarMusicaId1 = location.pathname.includes("/editar-musica/");
+  const isEditarMusicaId2 = location.pathname.includes("/edit-music/");
+
   const isNuevaCategoriaPage = location.pathname === "/nuevacategoria";
 
   return (
@@ -51,6 +54,7 @@ const Header = ({ location }) => {
               </Link>
             )}
           </div>
+
           <div style={{ display: "flex", marginRight: "10px" }}>
             {isEditarMusicaPage && (
               <Link to="/nuevacategoria" className="enlace">
@@ -63,9 +67,35 @@ const Header = ({ location }) => {
               </Link>
             )}
           </div>
+
+          <div style={{display: "flex", marginRight: "10px"}}>
+            {isEditarMusicaId1 && (
+              <Link to="/edit-delete-musica" className="enlace">
+                Visualizar Músicas
+              </Link>
+            )}
+            {isEditarMusicaId1 && (
+              <Link to="/editarusuarios" className="enlace">
+                Editar Usuarios
+              </Link>
+            )}
+          </div>
+          <div style={{display: "flex", marginRight: "10px"}}>
+            {isEditarMusicaId2 && (
+              <Link to="/edit-delete-musica" className="enlace">
+                Visualizar Músicas
+              </Link>
+            )}
+            {isEditarMusicaId2 && (
+              <Link to="/editarusuarios" className="enlace">
+                Editar Usuarios
+              </Link>
+            )}
+          </div>
+
           <div style={{ display: "flex" }}>
             {isNuevaCategoriaPage && (
-              <Link to="/editar_musica" className="enlace">
+              <Link to="/edit-delete-musica" className="enlace">
                 Editar Musica
               </Link>
             )}
@@ -74,6 +104,7 @@ const Header = ({ location }) => {
                 Editar Comentarios
               </Link>
             )}
+            
           </div>
         </nav>
       </div>
