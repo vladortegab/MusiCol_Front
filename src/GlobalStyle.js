@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-<<<<<<< HEAD
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,8 +22,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-=======
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     *{
         box-sizing: border-box;
         font-family: 'Roboto',sans-serif;
@@ -41,7 +38,6 @@ time, mark, audio, video {
     a, link {
         text-decoration: none;
     }
-<<<<<<< HEAD
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -106,8 +102,5 @@ body{
     
 
 
-=======
-`
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
 export default GlobalStyle

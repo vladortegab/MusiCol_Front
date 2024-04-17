@@ -13,11 +13,7 @@ export const ImageSpace = styled.div`
   height: 100vh;
   background-image: url("../../assets/img/HeroBG.png");
   background-repeat: no-repeat;
-<<<<<<< HEAD
   background-size: urlImagen;
-=======
-  background-size: cover;
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
   background-position: center;
   @media (max-width: 768px) {
     display: none;
@@ -41,11 +37,7 @@ export const Complete = styled.div`
   height: 100vh;
   background-image: url("../../assets/img/HeroBG.png");
   background-repeat: no-repeat;
-<<<<<<< HEAD
   background-size: urlImagen;
-=======
-  background-size: cover;
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
   background-position: center;
   @media (max-width: 768px) {
     display: none;

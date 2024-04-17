@@ -32,12 +32,8 @@ import HolaMundo from "./components/HolaMundo"; // Asegúrate de proporcionar la
 import EditMusic from "./components/EditMusica";
 import LoginContextProvider from "./contexts/LoginContext";
 import EditMusic1 from "./components/EditMusic1";
-<<<<<<< HEAD
 import VerCancion from "./components/VerCancion";
 import VerUsuarios from "./components/VerUsuarios";
-=======
-
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 class App extends Component {
   constructor(props) {
     super(props);
@@ -68,16 +64,11 @@ class App extends Component {
       });
   }
 
-<<<<<<< HEAD
   handleLogout = () => {
-=======
-  handleLogout() {
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     localStorage.removeItem(ACCESS_TOKEN);
     this.setState({
       authenticated: false,
       currentUser: null,
-<<<<<<< HEAD
     }, () => {
       // Redirige al usuario a la página de inicio de sesión después de cerrar sesión
       this.props.history.push("/login");
@@ -85,20 +76,11 @@ class App extends Component {
     });
   };
   
-=======
-    });
-    Alert.success("You're safely logged out!");
-  }
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
   handleLogin = () => {
     this.setState({ authenticated: true }, () => {
       // Redirige al usuario después de que el estado se haya actualizado correctamente
-<<<<<<< HEAD
       this.props.history.push("/editar-musica");
-=======
-      this.props.history.push("/edit-delete-musica");
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     });
   };
 
@@ -120,7 +102,6 @@ class App extends Component {
               authenticated={this.state.authenticated}
               onLogout={this.handleLogout}
             />
-<<<<<<< HEAD
             <LoginContextProvider>
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -140,29 +121,11 @@ class App extends Component {
 
                 {/*  <Route
                 path="/editar_musica"
-=======
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/nuevamusica" component={NuevaMusica} />
-              <Route path="/nuevacategoria" component={NuevaCategoria} />
-              <Route path="/hola-mundo" component={HolaMundo} />
-              <Route
-                path="/edit-delete-musica"
-                component={EditDeleteMusicaPagina}
-              />
-              {/* <Route path="/editar-musica/:id" component={EditMusic} /> */}
-              <Route path="/edit-music/:id" component={EditMusic1} />
-
-              <Route
-                path="/editar_musica"
-                /* component={EditarMusica} */
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
                 render={(props) => (
                   <LoginContextProvider>
                     <EditarMusica {...props} />
                   </LoginContextProvider>
                 )}
-<<<<<<< HEAD
               /> */}
                 <Route
                   path="/editar-musica/:id"
@@ -202,16 +165,10 @@ class App extends Component {
                
 
                 {/*  <PrivateRoute
-=======
-              />
-
-              {/*  <PrivateRoute
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
               path="/mi_musica"
               authenticated={this.state.authenticated}
               component={EditarMusica}
             /> */}
-<<<<<<< HEAD
                 {/* <PrivateRoute path="/mi_musica" authenticated={this.state.authenticated} component={MiMusica} /> */}
                 <Route
                   path="/login"
@@ -246,41 +203,6 @@ class App extends Component {
                 <Redirect to="/404" />
               </Switch>
             </LoginContextProvider>
-=======
-              {/* <PrivateRoute path="/mi_musica" authenticated={this.state.authenticated} component={MiMusica} /> */}
-              <Route
-                path="/login"
-                render={(props) => (
-                  <LoginContextProvider>
-                    <Login {...props} onLogin={this.handleLogin} />
-                  </LoginContextProvider>
-                )}
-              />
-          
-              <Route
-                path="/editar-musica/:id"
-                /* component={EditarMusica} */
-                render={(props) => (
-                  <LoginContextProvider>
-                    <EditMusic {...props} onLogin={this.handleLogin}/>
-                  </LoginContextProvider>
-                )}
-              />
-
-              <Route path="/signup" component={Signup} />
-              <PrivateRoute
-                path="/profile"
-                authenticated={this.state.authenticated}
-                currentUser={this.state.currentUser}
-                component={Profile}
-              />
-              <Route path="/mi_musica" component={MiMusica} />
-              <Route path="/login" component={OAuth2RedirectHandler} />
-              <Route component={Page404}></Route>
-
-              <Redirect to="/404" />
-            </Switch>
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
             <Footer />
           </div>
         </Router>

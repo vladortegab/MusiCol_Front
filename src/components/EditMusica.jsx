@@ -1,9 +1,5 @@
 ///Este para llamar datos de la API
-<<<<<<< HEAD
 import React, { useContext, useEffect, useState } from "react";
-=======
-import React, { useEffect, useState } from "react";
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 import { consultaAPI, editAPIPost } from "../api/apiJsonServer";
 import styled from "styled-components";
 import { consultaAPIYoutube, idVideoYoutube } from "../api/apiyoutube";
@@ -14,11 +10,8 @@ import LoaderSection from "../components/LoaderSection";
 import { DescripcionTextArea } from "../components/CampoFormulario";
 import { CampoFormulario } from "../components/CampoFormulario";
 import { ListaOpciones } from "../components/CampoFormulario";
-<<<<<<< HEAD
 import { Redirect } from "react-router-dom";
 import { LoginContext } from "../contexts/LoginContext";
-=======
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
 import ButtonForm from "../components/ButtonForm";
 
@@ -58,21 +51,12 @@ const ContenedorBotones = styled.div`
   align-items: center;
 `;
 
-<<<<<<< HEAD
 const EditMusic = (props) => {
   const { match } = props;
   console.log("🚀 ~ EditMusic ~ match:", match.params.id);
   const [musicas, setMusicas] = useState([]);
   const [generos, setGeneros] = useState([]);
   const [id, setMusicaEditar] = useState(null);
-=======
-const EditMusic = ({ match}) => {
- 
-
-  const [musicas, setMusicas] = useState([]);
-  const [generos, setGeneros] = useState([]);
-  const [musicaEditar, setMusicaEditar] = useState(null);
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
   const [nombre, setNombre] = useState("");
   const [url, setURL] = useState("");
   const [urlImg, setIMG] = useState("");
@@ -80,7 +64,6 @@ const EditMusic = ({ match}) => {
   const [genero, setGenero] = useState("Selecciona una opción");
   const [emptyMusica, setEmptyMusica] = useState(false);
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
   const [redirect, setRedirect] = useState(false);
   const { sessionStorage, token } = useContext(LoginContext);
 
@@ -128,42 +111,6 @@ const EditMusic = ({ match}) => {
     console.log('🚀 ~ useEffect ~ token:', token)
   }, [sessionStorage]); */
 
-=======
-
-  useEffect(() => {
-    const loadMusic = async () => {
-      try {
-        const musicasData = await consultaAPI("songs");
-        const generosData = await consultaAPI("generos");
-        setMusicas(musicasData);
-        setGeneros(generosData);
-
-        const id = parseInt(match.params.id, 10);
-        const musicToEdit = musicasData.find((musica) => musica.id === id);
-        if (musicToEdit) {
-          setMusicaEditar(musicToEdit);
-          setNombre(musicToEdit.titulo);
-          setDescripcion(musicToEdit.descripcion);
-          setURL(musicToEdit.urlMusica);
-          setIMG(musicToEdit.urlImagen);
-          setGenero(firstLetterCapital(musicToEdit.genero));
-        } else {
-          setEmptyMusica(true);
-        }
-
-        setLoading(false);
-      } catch (error) {
-        console.error("Error loading music:", error);
-        setMusicas([]);
-        setGeneros([]);
-        setLoading(false);
-      }
-    };
-
-    loadMusic();
-  }, [match.params.id]);
-
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
   const handleCleanFormulario = () => {
     setNombre("");
     setDescripcion("");
@@ -171,7 +118,6 @@ const EditMusic = ({ match}) => {
     setIMG("");
     setGenero("Selecciona una opción");
   };
-<<<<<<< HEAD
   const handleSubmitFormEdit = async (e) => {
     e.preventDefault();
 
@@ -206,40 +152,6 @@ const EditMusic = ({ match}) => {
 };
 
   
-=======
-
-  const handleSubmitFormEdit = (e) => {
-    e.preventDefault();
-  
-
-    const objetoEdicion = {
-      id: musicaEditar.id,
-      nombre,
-      genero: genero.toLowerCase(),
-      urlMusica: url,
-      urlImagen: urlImg,
-      descripcion,
-    };
-
-    const musicasActualizadas = musicas.map((musica) =>
-      musica.id === objetoEdicion.id ? objetoEdicion : musica
-    );
-
-    setMusicas(musicasActualizadas);
-
-    Swal.fire({
-      title: "¡ Éxito !",
-      text: "Se ha editado el video",
-      imageUrl: "/img/minions.gif",
-      imageAlt: "Success",
-      showCancelButton: false,
-      confirmButtonText: "OK",
-      confirmButtonColor: "#4CAF50",
-    });
-
-    setLoading(true);
-  };
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
   if (loading) {
     return <LoaderSection />;
@@ -248,7 +160,6 @@ const EditMusic = ({ match}) => {
   if (emptyMusica) {
     return <Error404 />;
   }
-<<<<<<< HEAD
   if (redirect) {
     return <Redirect to="/edit-delete-musica" />;
   }
@@ -260,13 +171,6 @@ const EditMusic = ({ match}) => {
       <FormularioAddMusica onSubmit={handleSubmitFormEdit}>
       <TituloFormularioMusica>Editar Música ✏️</TituloFormularioMusica>
 
-=======
-
-  return (
-    <Contenedor>
-      <FormularioAddMusica onSubmit={handleSubmitFormEdit}>
-        <TituloFormularioMusica>Editar Música ✏️</TituloFormularioMusica>
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
         <CampoFormulario
           type="text"
           titulo="Nombre del Archivo de Música"
@@ -281,12 +185,8 @@ const EditMusic = ({ match}) => {
         />
         <ListaOpciones
           titulo={"Géneros"}
-<<<<<<< HEAD
           generos={generos.map((musica) => firstLetterCapital(musica.name))}
           // generos={[]}
-=======
-          generos={generos.map((musica) => firstLetterCapital(musica.nombre))}
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
           valor={genero}
           setCategoria={setGenero}
         />

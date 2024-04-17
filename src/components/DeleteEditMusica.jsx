@@ -162,7 +162,6 @@ const EditDeleteMusicaPage = () => {
   }, [categoriaSeleccionada]); // No necesitas musicas como dependencia */
 
   const handleDelete = (musica) => {
-<<<<<<< HEAD
     // Obtener el ID de la música
     const idMusica = musica.id;
   
@@ -170,16 +169,11 @@ const EditDeleteMusicaPage = () => {
     deleteAPIPost("songs", idMusica)
       .then(() => {
         // Mostrar mensaje de éxito con SweetAlert2
-=======
-    deleteAPIPost("musicas", musica.id)
-      .then(() => {
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
         Swal.fire({
           title: "Éxito",
           text: "Se ha eliminado la música exitosamente",
           icon: "success",
         });
-<<<<<<< HEAD
   
         // Actualizar el estado de las músicas filtrando la que se eliminó
         setMusicas((prevMusicas) => prevMusicas.filter((m) => m.id !== idMusica));
@@ -195,16 +189,6 @@ const EditDeleteMusicaPage = () => {
       });
   };
   
-=======
-        // Aquí podrías actualizar tus datos si estás consultando la API nuevamente
-        // consultaAPI("musicas", setMusicas);
-        setMusicas(musicas.filter((m) => m.id !== musica.id));
-      })
-      .catch(() => {
-        console.error("Error al eliminar la música desde la API");
-      });
-  };
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
   const handleEdit = (musica) => {
     // Aquí puedes manejar la redirección a la página de edición
@@ -223,11 +207,7 @@ const EditDeleteMusicaPage = () => {
   return (
     <Contenedor>
       <h1 className="contenedor__imagen-titulo__titulo">
-<<<<<<< HEAD
         Editar o Eliminar Música
-=======
-        Editar o Eliminar Músicas
->>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
       </h1>
       <ListaOpciones
         nuevoCampo="Todos"
