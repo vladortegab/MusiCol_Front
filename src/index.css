@@ -1,0 +1,466 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,.80);
+  
+} */
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px; 
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/**
+  Link
+**/
+
+a {
+  color: #2098f3;
+  text-decoration: none;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+/**
+  Cuando pasa Mousse Boton
+**/
+
+a:hover {
+  color: #f60041;
+  text-decoration: none;
+}
+
+/**
+  Button
+**/
+
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 45px;
+  line-height: 45px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  position: relative;
+  color: rgba(0,0,0,.65);
+  background-color: transparent;
+  border-color: #e8e8e8;
+  outline: none;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-lg {
+  padding: 0 30px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #2098f3;
+    border-color: #2098f3;  
+} 
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #52c41a;
+    border-color: #52c41a;    
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+
+.btn-link {
+  border: none;
+  height: 34px;
+  padding: 0 15px;
+}
+
+.btn-link:hover {
+  background-color: rgba(158,158,158, 0.20);
+}
+
+
+/**
+  Form
+**/
+
+.form-item {
+	margin-bottom: 18px;
+}
+
+.form-item .btn {
+    cursor: pointer;
+}
+
+.form-item label {
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: rgba(0,0,0,.65);
+}
+
+.form-control {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  padding: 4px 11px;
+  width: 100%;
+  height: 45px;
+  font-size: 0.87em;
+  line-height: 45px;
+  color: rgba(0,0,0,.80);
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  transition: all .3s;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+
+.form-control:hover, .form-control:focus, .form-control:active {
+  border-color: #40a9ff;
+  outline: 0;
+  border-right-width: 1px!important;
+}
+
+.form-control:focus, .form-control:active {
+  box-shadow: 0 0 0 2px rgba(24,144,255,.2);    
+}
+
+.form-control.invalid {
+  border-color: #f5222d;
+}
+
+.form-control.invalid:focus, .form-control.invalid:active {
+  box-shadow: 0 0 0 2px rgba(245,34,45,.2);        
+} 
+
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: #f6f8fa;
+  opacity: 1;
+}
+
+.form-label {
+  margin-bottom: 10px;
+}
+
+/**
+  Or separator
+**/
+
+.or-separator {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 1em;    
+}
+
+.or-text {
+  position: absolute;
+  left: 46%;
+  top: 0;
+  background: #fff;
+  padding: 10px;
+  color: rgba(0,0,0,.45);
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    color: rgba(0,0,0,.80);
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.library-active {
+  margin-left: 30%;
+}
+
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    color: #fff;
+    background-color: #2098f3;
+    border-color: #2098f3; 
+    
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 2px solid rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgb(65, 65, 65);
+      color: white;
+    }
+  }
+  .library-active {
+    color: #fff;
+    background-color: #2098f3;
+    border-color: #2098f3; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+    }
+  }
+}
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-control {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  input {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  p {
+    padding: 1rem;
+  }
+}
+.play-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  width: 40%;
+  svg {
+    cursor: pointer;
+  }
+}
+
+.track {
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.animate-track {
+  background: rgb(204, 204, 204);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  padding: 1rem;
+  pointer-events: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90%;
+  }
+  .play-control {
+    width: 80%;
+  }
+}
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 25%;
+    border-radius: 50%;
+    transition: all 2s ease;
+  }
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song-container {
+    img {
+      width: 60%;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateSong {
+  animation: rotate 20s linear forwards infinite;
+}
+
+.library {
+  position: fixed;
+  box-shadow: 2px 2px 50px rgb(221, 221, 221);
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  overflow: scroll;
+  background: white;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+
+  h2 {
+    padding: 2rem;
+    margin-top: 0;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.75s ease-out;
+
+  img {
+    width: 30%;
+  }
+  &:hover {
+    background: rgb(235, 235, 235);
+  }
+}
+.song-description {
+  padding-left: 1rem;
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+}
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+
+.selected {
+  background: rgb(194, 208, 253);
+}
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: -10;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
+
