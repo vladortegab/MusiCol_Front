@@ -61,7 +61,11 @@ img {
     background-color: #000000;
     background-image: url('../../../MusicaCol/public/assets/img/HeroBG.png');
     background-repeat: no-repeat;
+<<<<<<< HEAD
     background-size: urlImagen;
+=======
+    background-size: cover;
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     background-position: center center;
     
 }
@@ -179,7 +183,11 @@ Link .hero__player{
 }
 
 .musicacard img {
+<<<<<<< HEAD
     object-fit: urlImagen;
+=======
+    object-fit: cover;
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     max-width: 100%;
     max-height: 100%;
 }
@@ -226,11 +234,22 @@ footer{
 
 
 /* Nueva Música y Nueva Categoria*/
+<<<<<<< HEAD
 /* body{
     background-color: #8bb7f0;
 } */
 
 
+=======
+body{
+    background-color: #000000;
+}
+
+.nuevamusica{
+    background-color: #000000;
+    padding-top: 40px;
+}
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
 .nuevomusica__titulo{
     color: #F5F5F5;
@@ -354,7 +373,11 @@ footer{
 .botonSaveGenero:hover,
 .botonLimpiarGenero:hover,
 .botonEditarGenero:hover,
+<<<<<<< HEAD
 .botonVerMusica:hover,
+=======
+.botonVerVideo:hover,
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 .botonVerFullGenero:hover,
 .botonEditDeleteMusica:hover {
   background-color: red;

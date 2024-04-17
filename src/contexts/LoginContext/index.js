@@ -1,5 +1,9 @@
 import React, { createContext, useEffect, useState } from "react";
+<<<<<<< HEAD
 import { login,logout  } from "../../pages/LoginGoogle/util/APIUtils";
+=======
+import { login } from "../../pages/LoginGoogle/util/APIUtils";
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 import Alert from "react-s-alert";
 import { ACCESS_TOKEN, ROL_USER } from "../../pages/LoginGoogle/constants";
 //import { withRouter  } from "react-router-dom";
@@ -16,12 +20,27 @@ const LoginContextProvider = ({ children }) => {
   // const router = withRouter ();
   const sessionStorage = window.sessionStorage;
 
+<<<<<<< HEAD
     useEffect(()=>{
     console.log("🚀 ~ LoginContextProvider ~ token:", token)
   },[token]) 
 
   const convertedToken = (token) => {
     let myDecodedToken = decodeToken(token);
+=======
+  /*   useEffect(()=>{
+    console.log("🚀 ~ LoginContextProvider ~ token:", token)
+  },[token]) */
+
+  useEffect(() => {
+    console.log(email, password, loginSuccess);
+  }, [email, password, loginSuccess]);
+
+  const convertedToken = (token) => {
+    let myDecodedToken = decodeToken(token);
+    console.log("🚀 ~ convertedToken ~ myDecodedToken:", myDecodedToken)
+
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     return myDecodedToken.roles[0].authority;
   };
 
@@ -31,7 +50,14 @@ const LoginContextProvider = ({ children }) => {
     sessionStorage.setItem(ACCESS_TOKEN, accessToken);
     sessionStorage.setItem(ROL_USER, role);
     sessionStorage.setItem('oauth', true)
+<<<<<<< HEAD
 
+=======
+    console.log(
+      "🚀 ~ handleSuccessfullLogin ~ sessionStorage:",
+      sessionStorage.getItem(ROL_USER)
+    );
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
     // Mostrar alerta de inicio de sesión exitoso
     /* Alert.success("Inicio de sesión exitoso"); */
 
@@ -43,18 +69,27 @@ const LoginContextProvider = ({ children }) => {
           console.log("🚀 ~ setTimeout ~ role:", role)
           // Redirigir al usuario a /edit-delete-videos si es administrador
           
+<<<<<<< HEAD
           window.location.href = "/editar_musica"; 
         } else if (role === "ROLE_USER"){
           // Redirigir al usuario a /mi_musica si no es administrador
           window.location.href = "/mi_musica"; 
           /* console.log("🚀 ~ setTimeout ~ mi_musica:", 'NO SOY ROLE') */
           
+=======
+          window.location.href = "/edit-delete-musica"; 
+        } else {
+          // Redirigir al usuario a /mi_musica si no es administrador
+          /* window.location.href = "/mi_musica"; */
+          /* console.log("🚀 ~ setTimeout ~ mi_musica:", 'NO SOY ROLE') */
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
         }
       } else {
         Alert.success("Something was wrong");
       }
     }, 100);
   };
+<<<<<<< HEAD
     
   const handleLogout = () => {
     sessionStorage.removeItem(ACCESS_TOKEN);
@@ -63,6 +98,8 @@ const LoginContextProvider = ({ children }) => {
     window.location.href = "/login"; // Redirige al usuario a la página de inicio de sesión después de cerrar sesión
     Alert.success("You're safely logged out!");
   };
+=======
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -92,7 +129,10 @@ const LoginContextProvider = ({ children }) => {
     <LoginContext.Provider
       value={{
         login,
+<<<<<<< HEAD
         logout,
+=======
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
         email,
         setEmail,
         password,
@@ -102,9 +142,13 @@ const LoginContextProvider = ({ children }) => {
         handleSubmit,
         handleSuccessfullLogin,
         setIsAuthenticate, 
+<<<<<<< HEAD
         isAuthenticate,
         token,
         sessionStorage
+=======
+        isAuthenticate
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
       }}
     >
       {children}

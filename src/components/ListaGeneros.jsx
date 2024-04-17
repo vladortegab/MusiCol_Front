@@ -30,10 +30,16 @@ const ListaGeneros = ({ isAuthenticated }) => {
                     key={musica.id}
                     musica={musica}
                     color={color}
+<<<<<<< HEAD
                     url="/ver-cancion/:id"
                     isAuthenticated={isAuthenticated}
                   />
                   
+=======
+                    url="/musicas"
+                    isAuthenticated={isAuthenticated}
+                  />
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
                 ))}
               </div>
             </div>
@@ -44,6 +50,7 @@ const ListaGeneros = ({ isAuthenticated }) => {
     )
 }
 
+<<<<<<< HEAD
 export default ListaGeneros
  /*
 import React, { useState, useEffect } from "react";
@@ -130,3 +137,6 @@ const ListaGeneros = ({ isAuthenticated }) => {
 
 export default ListaGeneros;
 */
+=======
+export default ListaGeneros
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882

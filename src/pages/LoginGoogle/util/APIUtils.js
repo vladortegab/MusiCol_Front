@@ -73,12 +73,16 @@ export function login(loginRequest) {
         body: JSON.stringify(loginRequest)
     });
 } 
+<<<<<<< HEAD
 export function logout() {
     // Elimina el token de acceso del almacenamiento local al cerrar sesión
     localStorage.removeItem(ACCESS_TOKEN);
 
     // Realiza cualquier otra lógica necesaria al cerrar sesión, como redirigir al usuario a la página de inicio de sesión, etc.
 }
+=======
+
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
 //Esta se usa con json en el front
 /* export function login(loginRequest) {

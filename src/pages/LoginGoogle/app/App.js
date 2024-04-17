@@ -47,6 +47,7 @@ class App extends Component {
     });    
   }
 
+<<<<<<< HEAD
   handleLogout = () => {
     localStorage.removeItem(ACCESS_TOKEN);
     this.setState({
@@ -59,6 +60,16 @@ class App extends Component {
     });
   };
   
+=======
+  handleLogout() {
+    localStorage.removeItem(ACCESS_TOKEN);
+    this.setState({
+      authenticated: false,
+      currentUser: null
+    });
+    Alert.success("You're safely logged out!");
+  }
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
   componentDidMount() {
     this.loadCurrentlyLoggedInUser();

@@ -1,11 +1,15 @@
 import LogoMenu from "../img/LogoMenu.png";
+<<<<<<< HEAD
 import { logout } from "../pages/LoginGoogle/util/APIUtils"; // Importa la función logout desde APIUtils
 
+=======
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 import { Link, withRouter } from "react-router-dom";
 import ButtonLink from "../../src/components/ButtonLink";
 import "../css/estilos.css";
 
 const Header = ({ location }) => {
+<<<<<<< HEAD
   const handleLogout = () => {
     // Llama a la función logout al hacer clic en el botón de cerrar sesión
     logout();
@@ -13,6 +17,8 @@ const Header = ({ location }) => {
     window.location.href = "/login"; // Puedes cambiar '/login' por la ruta a tu página de inicio de sesión
   };
 
+=======
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
   const EstilosBtn = {
     display: "inline-block",
     backgroundColor: "#F5F5F5",
@@ -31,12 +37,20 @@ const Header = ({ location }) => {
   const isHomePage = location.pathname === "/";
   const isMiMusicaPage = location.pathname === "/mi_musica";
   const isNuevaMusicaPage = location.pathname === "/nuevamusica";
+<<<<<<< HEAD
   const isNuevaCategoriaPage = location.pathname === "/nuevacategoria";
 
   const isEditarMusicaId3 = location.pathname.includes("/editar_musica");
   const isEditarMusicaPage = location.pathname === "/edit-delete-musica";
   const isEditarMusicaId1 = location.pathname.includes("/editar-musica/");
   //const isEditarMusicaId2 = location.pathname.includes("/edit-music/");
+=======
+  const isEditarMusicaPage = location.pathname === "/edit-delete-musica";
+  const isEditarMusicaId1 = location.pathname.includes("/editar-musica/");
+  const isEditarMusicaId2 = location.pathname.includes("/edit-music/");
+
+  const isNuevaCategoriaPage = location.pathname === "/nuevacategoria";
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
 
   return (
     <header className="header">
@@ -46,6 +60,7 @@ const Header = ({ location }) => {
         </Link>
 
         <nav className="header__nav">
+<<<<<<< HEAD
           <div style={{ display: "flex", marginRight: "10px" }}>
             {isHomePage && !isLoggedIn && (
               <ButtonLink
@@ -63,6 +78,14 @@ const Header = ({ location }) => {
           {/* Agrega el botón de cierre de sesión */}
 
           {/* Para Usuario Vista después de Login*/}
+=======
+        <div style={{ display: 'flex', marginRight: '10px' }}>
+    {isHomePage && !isLoggedIn && <ButtonLink to='/mi_musica'  titulo='Mi Musica' styles={EstilosBtn} />}
+    {isHomePage && isLoggedIn && <Link to='/login' className="enlace">Login</Link>}
+</div>
+
+
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
           <div style={{ display: "flex", marginRight: "10px" }}>
             {isMiMusicaPage && (
               <Link to="/nuevamusica" className="enlace">
@@ -74,6 +97,7 @@ const Header = ({ location }) => {
                 Mi Musica
               </Link>
             )}
+<<<<<<< HEAD
 
             {isNuevaMusicaPage && (
               <button onClick={handleLogout} className="enlace">
@@ -105,10 +129,32 @@ const Header = ({ location }) => {
             {isEditarMusicaId1 && (
               <Link to="/edit-delete-musica" className="enlace">
                 Editar Música
+=======
+          </div>
+
+          <div style={{ display: "flex", marginRight: "10px" }}>
+            {isEditarMusicaPage && (
+              <Link to="/nuevacategoria" className="enlace">
+                Nueva Categoria
+              </Link>
+            )}
+            {isEditarMusicaPage && (
+              <Link to="/editarusuarios" className="enlace">
+                Editar Usuarios
+              </Link>
+            )}
+          </div>
+
+          <div style={{display: "flex", marginRight: "10px"}}>
+            {isEditarMusicaId1 && (
+              <Link to="/edit-delete-musica" className="enlace">
+                Visualizar Músicas
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
               </Link>
             )}
             {isEditarMusicaId1 && (
               <Link to="/editarusuarios" className="enlace">
+<<<<<<< HEAD
                 Editar Usuario
               </Link>
             )}
@@ -128,6 +174,16 @@ const Header = ({ location }) => {
             {isEditarMusicaId2 && (
               <Link to="/edit-delete-musica" className="enlace">
                 Editar Músicas
+=======
+                Editar Usuarios
+              </Link>
+            )}
+          </div>
+          <div style={{display: "flex", marginRight: "10px"}}>
+            {isEditarMusicaId2 && (
+              <Link to="/edit-delete-musica" className="enlace">
+                Visualizar Músicas
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
               </Link>
             )}
             {isEditarMusicaId2 && (
@@ -135,6 +191,7 @@ const Header = ({ location }) => {
                 Editar Usuarios
               </Link>
             )}
+<<<<<<< HEAD
           
           </div> */}
 
@@ -157,6 +214,10 @@ const Header = ({ location }) => {
             )}
           </div>
           {/* Para Admin Vista Nuevos Generos-Categoria */}
+=======
+          </div>
+
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
           <div style={{ display: "flex" }}>
             {isNuevaCategoriaPage && (
               <Link to="/edit-delete-musica" className="enlace">
@@ -168,11 +229,15 @@ const Header = ({ location }) => {
                 Editar Comentarios
               </Link>
             )}
+<<<<<<< HEAD
               {isNuevaCategoriaPage && (
               <button onClick={handleLogout} className="enlace">
                 Cerrar sesión
               </button>
             )}
+=======
+            
+>>>>>>> 88fe98f5a1c9f31e2b57bf65778605109200f882
           </div>
         </nav>
       </div>
